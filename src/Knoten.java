@@ -24,4 +24,14 @@ public class Knoten {
     public Knoten getRechts() {
         return rechts;
     }
+
+    public void preOrder() {
+        System.out.print(wert + "-");
+        if (links != null) {
+            links.preOrder();
+        }
+        if (rechts != null) {
+            rechts.preOrder();
+        }
+    }
 }

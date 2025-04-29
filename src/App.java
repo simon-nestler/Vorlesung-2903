@@ -38,5 +38,8 @@ public class App {
                 10,
                 links,
                 rechts);
+
+        wurzel.preOrder();
+        System.out.println();
     }
 }

@@ -8,4 +8,20 @@ public class Knoten {
         this.links = links;
         this.rechts = rechts;
     }
+
+    public Knoten(int wert) {
+        this(wert, null, null);
+    }
+
+    public int getWert() {
+        return wert;
+    }
+
+    public Knoten getLinks() {
+        return links;
+    }
+
+    public Knoten getRechts() {
+        return rechts;
+    }
 }

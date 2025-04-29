@@ -41,5 +41,11 @@ public class App {
 
         wurzel.preOrder();
         System.out.println();
+
+        wurzel.inOrder();
+        System.out.println();
+
+        wurzel.postOrder();
+        System.out.println();
     }
 }

@@ -25,13 +25,33 @@ public class Knoten {
         return rechts;
     }
 
+    public void inOrder() {
+        traverseWithVisit(2);
+    }
+
     public void preOrder() {
-        System.out.print(wert + "-");
+        traverseWithVisit(1);
+    }
+
+    public void postOrder() {
+        traverseWithVisit(3);
+    }
+
+    private void traverseWithVisit(int visit) {
+        if (visit == 1) {
+            System.out.print(wert + " ");
+        }
         if (links != null) {
-            links.preOrder();
+            links.traverseWithVisit(visit);
+        }
+        if (visit == 2) {
+            System.out.print(wert + " ");
         }
         if (rechts != null) {
-            rechts.preOrder();
+            rechts.traverseWithVisit(visit);
+        }
+        if (visit == 3) {
+            System.out.print(wert + " ");
         }
     }
 }
